@@ -79,8 +79,14 @@ a {
     font-weight: normal;
     text-align: left;
 }
-.section-container {
-  
+#menuToggle input {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide input */
+  z-index: 1; /* top of the menu */
 }
 
 
@@ -282,6 +288,32 @@ text-transform:uppercase;
         background-repeat: no-repeat;
         background-size: auto auto;
   background-position: center center;
+    }
+#menuToggle {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top:1rem;
+  right:1rem;
+}
+#menuToggle input {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide input */
+  z-index: 1; /* top of the menu */
+}
+#menuToggle span{
+  width: 55px;
+  height: 8px;
+  margin-bottom: 10px;
+  background: #051B4E;
+  border-radius: 4px;
     }
 .menu-list {
     font-size: 0;
