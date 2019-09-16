@@ -1,0 +1,816 @@
+@font-face {
+    font-family: 'lato';
+    font-style: normal;
+    font-weight: normal;
+    src: url('https://github.com/anjapetr/Diplom-Fullstack/blob/master/Font/latoregular.woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+    font-family:'lato', sans-serif;
+    margin: 0;
+    min-width: 320px;
+}
+a { 
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*header*/
+.header {
+    position: relative;
+    z-index: 0;
+          background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_1920.png?raw=true");
+        background-repeat: no-repeat;
+        background-size: auto;
+}
+.header:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    box-sizing: border-box;
+          padding-left: 3rem;
+        padding-right: 3rem;
+}
+.menu-container {
+  width:100%;
+}
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+.menu-list a {
+  color: #000000;
+}
+.menu-item:nth-child(n+1) {
+  margin-left: 1.6rem;
+}
+.menu-item:last-child {
+  margin-left:auto;
+  margin-right:0;
+}
+.date {
+  display: block;
+}
+.headline {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+.subline {
+    color: black;
+    font-weight: normal;
+    text-align: left;
+}
+.section-container {
+  
+}
+
+
+/*phil*/
+.philosophy-container {
+    display: flex;
+}
+.philosophy-title {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+.philosophy-content_article{
+    margin-bottom: 1.5em;
+}
+
+/*fashion*/
+.fashion_block {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.fashion_block:nth-child(even) {
+  flex-direction: row-reverse;
+  margin-top: 3rem;
+}
+.fashion_picture {
+  display: flex;
+  width:50%;
+  box-sizing:border-box;
+}
+.fashion_article {
+  box-sizing:border-box;
+}
+.fashion_content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;    
+}
+.fashion_line {
+  background-color: #EB1350;
+
+}
+.fashion_line_bottom {
+  background-color: #061C4E;
+
+}
+.fashion_content_bottom {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction:column;
+}
+.cloth_info {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+.fashion_title {
+color: #061C4E;
+text-transform:uppercase;
+}
+.fashion_title_bottom {
+color: #EB1350;
+text-transform:uppercase;
+}
+.fashion_article_title {
+  text-transform:uppercase;
+  font-weight:bold;
+  padding-top:100px;
+}
+
+
+
+
+/*style*/
+.style {
+    font-family: 'lato', sans-serif;
+}
+.style_head {
+  position: relative;
+}
+.style_heading {
+  position: absolute;
+  color: #061C4E;
+  }
+.style_subline_container {
+  text-align: center;
+  font-weight: bold;
+  margin-left:auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.style-picture {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
+.picture_style{
+  max-width: 100%;
+}
+/*invitation*/
+.invitation {
+    background-color: #0a0e34;
+    position: relative;
+    opacity:80%;
+    z-index: -1;
+}
+.invitation:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.invitation_sign_button{
+  color: #C4C4C4;
+}
+.form-row {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+.invitation_button {
+  background: none;
+  border: none;
+}
+.field_invitation {
+  box-sizing: border-box;
+  border: none;
+}
+.invitation_slogan {
+  color: #FFFFFF;
+  text-align: center;
+}
+/* footer*/
+.footer {
+  font-family: 'lato', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-list_footer {
+  list-style-type: none;
+  list-style: none;
+}
+.footer_item { 
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
+.menu_footer, .sign, .footer_form {
+  text-align: center;
+  box-sizing: border-box;
+}
+.sign_text {
+  color: #000000;
+}
+.footer_buttons { 
+    display: flex;
+    justify-content: space-between;
+}
+.icon {
+  width: 100%;
+}
+.field_footer {
+  border:none;
+}
+.field_footer::placeholder{
+  color: white;
+}
+.footer_button {
+    border-radius: 20px;
+    border:none;
+    background:#C4C4C4;
+    text-align: center;
+    text-transform:uppercase;
+}
+
+
+
+
+/* Медиазапросы */
+
+
+/* header*/
+@media (max-width: 640px) {
+.container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+.header {
+        background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_640.png?raw=true");
+        background-repeat: no-repeat;
+        background-size: auto auto;
+  background-position: center center;
+    }
+.menu-list {
+    font-size: 0;
+  } 
+.date {
+    padding-bottom: 1.75em;
+    margin-top: 23.8rem;
+  }
+.name_brand {
+    margin-top: 0.5rem;
+  }
+.headline {
+        font-size: 1.75rem;
+    }
+.subline {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+.container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    } 
+.menu-list {
+    font-size: 1.5rem;
+  }  
+.menu-container {
+  padding-top: 3rem;
+}
+.date {
+    padding-left: 59.5%;
+    padding-bottom: 5rem;
+    padding-top: 15.5rem;
+  }
+.name_brand {
+    margin-top: 4rem;
+  }
+.headline {
+    font-size: 3rem;
+  }
+.subline {
+    font-size: 1.8rem;
+  }}
+@media (min-width: 641px) and (max-width: 1439px) {
+  .header {
+  background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_1024.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+}
+@media (min-width: 1024px) {
+  .menu-container {
+  padding-top: 3rem;
+}
+.date {
+    padding-left: 68.5%;
+    padding-bottom: 10.5em;
+    padding-top: 20.25rem;
+  }
+.name_brand {
+    margin-top: 4rem;
+  }
+.headline {
+    font-size: 3rem;
+  }
+.subline {
+    font-size: 1.8rem;
+  }}
+@media (min-width: 1440px) {
+  .header {
+  background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_1920.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: auto auto ;
+    background-position: center center;
+  }
+}
+
+/* phylosophy*/
+@media (max-width: 640px) {
+  .philosophy-container{
+    flex-wrap:wrap;
+    flex-direction:column-reverse;
+    align-items: center;
+  }
+  .philosophy-content{
+font-size:0.85rem;
+padding-top: 3rem;
+padding-bottom: 6rem;
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+    }
+  .philosophy-picture-container, .philosophy-picture, .picture-src{
+      width: 100%;
+    }
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+.philosophy-container{
+    flex-wrap:wrap;
+    flex-direction:column-reverse;
+    align-items: center;
+  }
+
+  
+
+.philosophy-content {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1rem;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1439px){
+      .philosophy-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 4rem;
+        padding-right: 6.5rem;
+        font-size: 1.25rem;
+    }
+}
+@media (min-width: 1440px) {
+    .philosophy-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 4rem;
+        padding-right: 6.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* fashion*/
+@media (max-width:1023px) {
+.picture_model {
+ width:100%; 
+}
+.fashion_line, .fashion_line_bottom{
+  height:4.5rem;
+  width:100%;
+  }  
+.fashion_picture {
+  width:100%;
+  margin-top:4.5rem;
+  }
+.fashion_content, .fashion_content_bottom {
+  margin-left:1.5rem;
+  margin-right:1.5rem;
+  margin-top:1.5rem;
+  width:85%;
+  position: relative;
+  }
+.cloth_info {
+    margin-top:1rem;
+  }
+.fashion_title, .fashion_title_bottom {
+  position: absolute;
+  }
+}
+@media(min-width:1024px) {
+.fashion_block {
+  position: relative;
+  }  
+.fashion_line, .fashion_line_bottom {
+  position: absolute;
+  z-index:-1;  
+  } 
+.cloth_info{
+   font-weight: 300;
+   font-size: 1.5rem;
+  }
+.cloth_headline{
+    font-weight: 800;
+font-size: 2.25rem;
+  }
+.fashion_title, .fashion_title_bottom {
+    font-size: 6rem;
+    margin-top: 12.1rem;
+  } 
+.fashion_content {
+    padding-left:5%;
+  }
+
+}
+@media(min-width:1024px) and (max-width:1439px) {
+
+.fashion_line, .fashion_line_bottom  {
+  height: 9.8rem;
+  width: 72%;
+  top: 10.75rem;
+}
+.fashion_content {
+  width:50%;
+  max-width:26rem;
+  margin-left: 1.9rem;
+  }  
+.fashion_article {
+    font-size:1.25rem;
+    max-width:38rem;
+    margin-top: 5rem;
+  }
+.fashion_content_bottom {
+  width:50%;
+  max-width:24rem;
+  margin-right: 1.9rem;
+  margin-left:auto;
+  text-align:right;
+  } 
+}
+@media (min-width:1440px) {
+.fashion_picture {
+      padding-left:10%;
+  }
+.picture_model{
+ max-width:100%; 
+}
+.fashion_line {
+  height: 9.8rem;
+  width:66.3%;
+  position: absolute;
+  z-index:-1;
+  top: 10.75rem;
+}
+.fashion_content {
+  width:50%;
+  min-width:26rem;
+  left: 40%;
+  }  
+.fashion_article{
+    font-size:1.5rem;
+    margin-top: 5rem;
+  }
+.fashion_line_bottom {
+  background-color: #061C4E;
+  height: 9.8rem;
+  width:62%;
+  position: absolute;
+  z-index:-1;
+  top: 10.75rem;
+}
+.fashion_content_bottom {
+  width:50%;
+  text-align:right;
+  } 
+}
+
+
+
+/* style*/
+@media (max-width:640px) {
+.style_heading {
+  font-size: 3rem;
+  left: 50%;
+  top: 0.8rem;
+  transform: translate(-50%);
+  }
+.style-picture {
+  flex-wrap: wrap;
+}
+.style_subline_container {
+  max-width: 15.7rem;  
+  padding-top:2rem;
+  }
+.style_subline{
+    font-size:0.85rem;
+  }
+.style_white {
+  height: 4.6rem;
+  background-color:#FFC600;
+  }
+.style_yellow {
+    height: 6.6rem;
+    background-color:white; 
+  }
+
+}
+@media(min-width:641px) and (max-width:1023px){
+.style_heading {
+  font-size: 4rem;
+  left: 50%;
+  top: 7rem;
+  transform:translate(-50%, -50%);
+  }
+.style_subline_container {
+  font-size:1.3rem;
+  max-width: 60%;  
+  padding-top:3.5rem;
+  }
+.style_white {
+  height: 7rem;
+  background-color:white;
+  }
+.style_yellow {
+    height: 8rem;
+    background-color:#FFC600; 
+  }
+}
+@media (min-width:1024px) {
+.style{
+    padding-bottom:4.8rem;
+  }
+.style_heading {
+  font-size: 6rem;
+  left: 50%;
+  top: 10.25rem;
+  transform: translate(-50%, -50%);
+  }
+.style_subline_container {
+  font-size:2.25rem;
+  max-width: 40rem;  
+   padding-top:5rem;
+  }
+.style_white {
+  height: 10.25rem;
+  background-color:white;
+  }
+.style_yellow {
+    height: 11.75rem;
+    background-color:#FFC600; 
+  }
+}
+
+/* invitation*/
+@media (max-width: 640px) {
+.invitation {
+        padding-top: 5.75rem;
+        padding-bottom: 7.8rem;
+    }
+.invitation:before{
+        background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Invitation.jpg?raw=true");
+    }  
+.invitation_slogan {
+    font-size:0.8rem;
+  line-height: 17px;
+  }
+.field_invitation {
+  width: 14rem;
+  height: 1.85rem;
+  border-radius: 3rem;
+  padding-left: 1rem;
+  box-sizing:border-box;
+}
+.placeholder{
+    padding-left: 1rem;
+    font-size: 0.8rem;
+  }
+.invitation_slogan_container{
+    width: 14rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1.3rem;
+  }
+.invitation_button {
+    font-size: 0.8rem;
+    padding-top:1rem;
+  }  
+}
+@media (min-width: 641px) and (max-width:1023px) {
+.invitation {
+        padding-top: 10.8rem;
+        padding-bottom: 10.8rem;
+    }
+.invitation:before{
+        background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Invitation.jpg?raw=true");
+    }
+.invitation_slogan {
+  font-size:1.2rem;
+  }
+.field_invitation {
+  width: 50%;
+  height: 3rem;
+  border-radius: 3rem;
+  padding-left: 1.5rem;
+  box-sizing:border-box;
+  font-size: 1rem;
+}
+.invitation_slogan_container{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+.invitation_button {
+    font-size: 1.5rem;
+    padding-top:1.5rem;
+  }  
+  
+}
+@media (min-width: 1024px){
+.invitation {
+        padding-top: 11.75rem;
+        padding-bottom: 6.75rem;
+    }
+.invitation:before {
+        background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Invitation.jpg?raw=true");
+    }
+.field_invitation {
+  width: 41rem;
+  font-size: 1.75rem;
+  height: 6rem;
+  border-radius: 3rem;
+  padding-left: 2.5rem;
+  box-sizing:border-box;
+}
+.placeholder{
+    padding-left: 1rem;
+    font-size:5rem;
+  }
+.invitation_slogan{
+    font-size:2.25rem;
+  }
+.invitation_slogan_container{
+    width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 4.25rem;
+  }
+.invitation_button{
+    font-size: 1.75rem;
+    padding-top:3.3rem;
+  }
+}
+
+
+/* footer*/
+@media (max-width: 640px) {
+  .menu_footer, .sign, .footer_form {
+  width: 100%;
+  }
+  .footer {
+    flex-direction:column-reverse;
+  }
+  .sign {
+    order:1;
+    padding-top:2.1rem;
+    padding-bottom:4rem;
+  }
+  .menu-item_footer {
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+  .menu_footer {
+  padding-bottom: 3.8rem;
+}
+  .sign_text {
+  font-size:0.8rem;
+}
+  .footer_buttons {    
+  padding-top: 2.1rem;
+  padding-left: 20%;
+  padding-right: 20%;
+  }
+  .footer_form {
+    padding-top:4.1rem;
+    padding-bottom:4.1rem;
+  }
+  .field_footer {
+  border-radius: 20px;
+  background:#C4C4C4;
+  border: none;
+  width: 75%;
+  height: 1.8rem;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+}
+  
+  .button_fb, .button_whats{
+    margin-right: rem;
+  }
+.footer_button {
+    width:30%;
+    height:1.8rem;
+    margin-top: 1.25rem;
+  font-size:0.8rem;
+}
+
+}
+@media (min-width: 641px) {
+.menu_footer, .sign, .footer_form {
+  width: calc(100%/3);
+}
+.menu-item_footer {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.menu_footer {
+  padding-top: 7.5rem;
+  padding-bottom: 9.3rem;
+}
+.sign {
+    padding-top:7.5rem;
+    padding-bottom:3.8rem;
+  }
+.sign_text {
+  font-size:1.5rem;
+  padding-top:7.5rem;
+}  
+.footer_form {
+    padding-top:7.5rem;
+  }
+.footer_buttons {    
+  padding-top: 2.1rem;
+  padding-left: 20%;
+  padding-right: 20%;
+  }
+.field_footer {
+  border-radius: 20px;
+  background:#C4C4C4;
+  border:none;
+  width:75%;
+  height: 2.3rem;
+  padding-left:1.3rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+
+}
+.footer_button {
+    width:30%;
+    height:2.3rem;
+    margin-top: 1.25rem;
+  font-size:1.5rem;
+}
+  
+    .button_fb, .button_whats{
+    margin-right: 1rem;
+  }
+}
