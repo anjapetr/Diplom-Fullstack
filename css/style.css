@@ -40,7 +40,6 @@ a {
     z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
 }
 .container {
     box-sizing: border-box;
@@ -102,7 +101,7 @@ a {
 .fashion_block {
   display: flex;
   position: relative;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 .fashion_block:nth-child(even) {
   flex-direction: row-reverse;
@@ -111,8 +110,7 @@ a {
 .fashion_picture {
   display: flex;
   width:50%;
-  justify-content: center;
-  align-items:center;
+  box-sizing:border-box;
 }
 .fashion_article {
   box-sizing:border-box;
@@ -120,17 +118,15 @@ a {
 .fashion_content {
     box-sizing: border-box;
     display: flex;
-    flex-direction:column;    
+    flex-direction: column;    
 }
 .fashion_line {
   background-color: #EB1350;
-  position: absolute;
-  z-index:-1;
+
 }
 .fashion_line_bottom {
-  background-color:#061C4E;
-  position: absolute;
-  z-index:-1;
+  background-color: #061C4E;
+
 }
 .fashion_content_bottom {
     box-sizing: border-box;
@@ -155,6 +151,10 @@ text-transform:uppercase;
   font-weight:bold;
   padding-top:100px;
 }
+
+
+
+
 /*style*/
 .style {
     font-family: 'lato', sans-serif;
@@ -278,16 +278,17 @@ text-transform:uppercase;
         padding-right: 1.5rem;
     }
 .header {
-        background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_320.png?raw=true");
+        background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_640.png?raw=true");
         background-repeat: no-repeat;
         background-size: auto auto;
+  background-position: center center;
     }
 .menu-list {
     font-size: 0;
   } 
 .date {
     padding-bottom: 1.75em;
-    padding-top: 23.8rem;
+    margin-top: 23.8rem;
   }
 .name_brand {
     margin-top: 0.5rem;
@@ -300,19 +301,12 @@ text-transform:uppercase;
   }
 
 }
-@media (min-width: 641px) {
 
-}
 @media (min-width: 641px) and (max-width: 1023px) {
 .container {
         padding-left: 3rem;
         padding-right: 3rem;
     } 
-.header {
-        background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_1024.png?raw=true");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 .menu-list {
     font-size: 1.5rem;
   }  
@@ -333,6 +327,13 @@ text-transform:uppercase;
 .subline {
     font-size: 1.8rem;
   }}
+@media (min-width: 641px) and (max-width: 1439px) {
+  .header {
+  background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_1024.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+}
 @media (min-width: 1024px) {
   .menu-container {
   padding-top: 3rem;
@@ -351,8 +352,14 @@ text-transform:uppercase;
 .subline {
     font-size: 1.8rem;
   }}
-
-
+@media (min-width: 1440px) {
+  .header {
+  background-image: url("https://github.com/anjapetr/Diplom-Fullstack/blob/master/Source/Mainmodel_1920.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: auto auto ;
+    background-position: center center;
+  }
+}
 
 /* phylosophy*/
 @media (max-width: 640px) {
@@ -412,65 +419,40 @@ padding-right: 1.5rem;
 
 
 /* fashion*/
-@media (max-width:1023px){
-.fashion {
-    padding-bottom: 5rem;
-  }  
-.fashion_line {
+@media (max-width:1023px) {
+.picture_model {
+ width:100%; 
+}
+.fashion_line, .fashion_line_bottom{
   height:4.5rem;
   width:100%;
-  order:2;
-  margin-top: 49.6rem;
-  }  
-.fashion_line_bottom{
-  height:4.5rem;
-  width:100%;
-  order:2;
-  margin-top: 46.5rem;
   }  
 .fashion_picture {
   width:100%;
-  order:1;
+  margin-top:4.5rem;
   }
-.fashion_content {
+.fashion_content, .fashion_content_bottom {
   margin-left:1.5rem;
   margin-right:1.5rem;
+  margin-top:1.5rem;
   width:85%;
-  order:3;
-  position:relative;
+  position: relative;
   }
-.fashion_content_bottom {
-  margin-left:1.5rem;
-  margin-right:1.5rem;
-  width:85%;
-  order:3;
-  position:relative;
-  }  
-.fashion_title, .fashion_title_bottom {
-  position:absolute;
-  font-size:3rem;
-margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
-  } 
 .cloth_info {
     margin-top:1rem;
+  }
+.fashion_title, .fashion_title_bottom {
+  position: absolute;
+  }
+}
+@media(min-width:1024px) {
+.fashion_block {
+  position: relative;
+  }  
+.fashion_line, .fashion_line_bottom {
+  position: absolute;
+  z-index:-1;  
   } 
-.fashion_article{
-    margin-top: 6rem;
-  }
-  
-}
-@media (max-width:640px) {
-
-.picture_fashion {
-    width:100%;
-  }
-
-}
-
-@media(min-width:1024px){
 .cloth_info{
    font-weight: 300;
    font-size: 1.5rem;
@@ -483,16 +465,16 @@ font-size: 2.25rem;
     font-size: 6rem;
     margin-top: 12.1rem;
   } 
+.fashion_content {
+    padding-left:5%;
+  }
+
 }
-@media(min-width:1024px) and (max-width:1439px){
-.picture-fashion{
-    width:100%;
-  }  
-.fashion_line {
+@media(min-width:1024px) and (max-width:1439px) {
+
+.fashion_line, .fashion_line_bottom  {
   height: 9.8rem;
-  width:72%;
-  position: absolute;
-  z-index:-1;
+  width: 72%;
   top: 10.75rem;
 }
 .fashion_content {
@@ -500,19 +482,11 @@ font-size: 2.25rem;
   max-width:26rem;
   margin-left: 1.9rem;
   }  
-.fashion_article{
+.fashion_article {
     font-size:1.25rem;
     max-width:38rem;
     margin-top: 5rem;
   }
-.fashion_line_bottom {
-  background-color: #061C4E;
-  height: 9.8rem;
-  width:72%;
-  position: absolute;
-  z-index:-1;
-  top: 10.75rem;
-}
 .fashion_content_bottom {
   width:50%;
   max-width:24rem;
@@ -522,9 +496,12 @@ font-size: 2.25rem;
   } 
 }
 @media (min-width:1440px) {
-.picture-fashion{
-    width:100%;
-  }  
+.fashion_picture {
+      padding-left:10%;
+  }
+.picture_model{
+ max-width:100%; 
+}
 .fashion_line {
   height: 9.8rem;
   width:66.3%;
@@ -539,7 +516,6 @@ font-size: 2.25rem;
   }  
 .fashion_article{
     font-size:1.5rem;
-    max-width:38rem;
     margin-top: 5rem;
   }
 .fashion_line_bottom {
@@ -552,9 +528,6 @@ font-size: 2.25rem;
 }
 .fashion_content_bottom {
   width:50%;
-  min-width:26rem;
-  margin-right: 4rem;
-  margin-left:20rem;
   text-align:right;
   } 
 }
@@ -779,6 +752,10 @@ font-size: 2.25rem;
   font-size: 0.8rem;
   padding-left: 1rem;
 }
+  
+  .button_fb, .button_whats{
+    margin-right: rem;
+  }
 .footer_button {
     width:30%;
     height:1.8rem;
@@ -832,4 +809,8 @@ font-size: 2.25rem;
     margin-top: 1.25rem;
   font-size:1.5rem;
 }
+  
+    .button_fb, .button_whats{
+    margin-right: 1rem;
+  }
 }
